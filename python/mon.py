@@ -8,7 +8,7 @@ import socket
 
 def check_ip(IP):
     try:
-        socket.inet_aton(addr)
+        socket.inet_aton(IP)
         return True 
     except socket.error:
         return False 
