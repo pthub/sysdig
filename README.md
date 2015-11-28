@@ -25,6 +25,6 @@ java -jar monitor-1.0.jar /usr/local/monitor/monitor.conf
 
 ## Process
 
-1. Execute one or more sysdig commands and pipe the output to a file
+1. Execute one or more sysdig commands and pipe the output to a file/s
 2. Change the config file to include the sysdig output directory
 3. Execute the java command to monitor the directory and send emails  
