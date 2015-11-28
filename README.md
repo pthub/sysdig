@@ -1,6 +1,9 @@
 # sysdig
 monitor sysdig output and send an email
 
+## article
+https://www.linkedin.com/pulse/intrusion-detection-cloud-pradeep-thomas?trk=pulse_spock-articles
+
 ## building it
 
 mvn clean package
