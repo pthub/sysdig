@@ -4,6 +4,15 @@ import time
 import smtplib
 from subprocess import call
 import sys
+import socket
+
+def check_ip(IP):
+    try:
+        socket.inet_aton(addr)
+        return True 
+    except socket.error:
+        return False 
+        
 def send_email(IP):
     #add the sender email address
     mailersender = ""
@@ -26,5 +35,6 @@ def send_email(IP):
     except:
         print "failed to send mail"
 
-call(["ufw", "allow", "from", sys.argv[1], "to", "any", "port", "22"])
-send_email(sys.argv[1])
+if check_ip(sys.argv[1]):        
+    call(["ufw", "allow", "from", sys.argv[1], "to", "any", "port", "22"])
+    send_email(sys.argv[1])
